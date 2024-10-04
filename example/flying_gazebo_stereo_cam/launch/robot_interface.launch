@@ -9,7 +9,7 @@
   </include>
   
   <!-- send flying_stereo_cam urdf to param server -->
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find flying_gazebo_stereo_cam)/model/flying_stereo_cam.xacro'"/>
+  <param name="robot_description" command="$(find xacro)/xacro '$(find flying_gazebo_stereo_cam)/model/flying_stereo_cam.xacro'"/>
   
   <!-- push robot_description to factory and spawn robot in gazebo -->
   <node pkg="gazebo_ros" type="spawn_model" name="spawn_robot" respawn="false" output="screen"
